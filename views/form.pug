@@ -1,0 +1,31 @@
+extends layout
+
+
+block content
+  .form-container
+    .form-wrapper
+      h2 Enter your new message
+      form(
+          method="POST"
+          action="/new"
+      )
+        label(
+            for="name"
+        ) Name
+        input(
+            type="text"
+            id="name"
+            name="name"
+        )
+
+        label(
+            for="message"
+        ) Input your message
+        textarea(
+            id="message"
+            name="message"
+        )
+
+        button(
+            type='submit'
+        ) Submit New Message
